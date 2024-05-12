@@ -404,7 +404,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
             </button>
 
             {/* 검색창 */}
-            {/* <div className="flex justify-center items-center self-center w-[20%] max-w-2xl h-[37px] left-[11rem] bottom-[0.7rem] absolute focus-within:shadow-md rounded-md shadow-md dark:shadow-none dark:bg-[#666] border border-[#eee] dark:border-[#666] hover:border-1 focus-within:border-1">
+            <div className="flex justify-center items-center self-center w-[20%] max-w-2xl h-[37px] left-[11rem] bottom-[0.7rem] absolute focus-within:shadow-md rounded-md shadow-md dark:shadow-none dark:bg-[#666] border border-[#eee] dark:border-[#666] hover:border-1 focus-within:border-1">
               <Image
                 src="/search.svg"
                 alt="Search Logo"
@@ -422,7 +422,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                 onKeyDown={onEnterPress}
                 className="absolute w-[90%] max-w-[60%] h-full left-[3rem] outline-none border-none outline-none dark:bg-[#666]"
               ></input>
-            </div> */}
+            </div>
             <div className="left-[4rem] top-[19px] absolute text-black dark:text-white">
               <Link href="/diary?page=1">
                 {currentTheme === 'dark' ? (
