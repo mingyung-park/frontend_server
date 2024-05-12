@@ -25,13 +25,12 @@ const Login = () => {
             alert('패스워드를 입력해주세요.')
             return
         }
-        setLogin(false)
+        setLogin(true)
         const result = await signIn('credentials', {
             username: id,
             password: password,
             redirect: false,
         })
-        setLogin(true)
 
         if (result?.error) {
             setError('login error')
@@ -51,7 +50,7 @@ const Login = () => {
         }
     }
     return login ? (
-        <LottieCat text="로그인 중" />
+        <LottieCat text="로그인 중이에요" />
     ) : (
         <div className="flex flex-col">
             <div className="flex justify-center items-center h-full mt-[15px]">
