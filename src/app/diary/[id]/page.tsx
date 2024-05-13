@@ -17,11 +17,6 @@ import {
 } from '@/app/components/fonts/fonts'
 import { useSession } from 'next-auth/react'
 import LottieCat from '@/app/components/LottieCat'
-import Sunny from '@/app/components/weathers/Sunny'
-import Snowy from '@/app/components/weathers/Snowy'
-import Windy from '@/app/components/weathers/Windy'
-import Rainy from '@/app/components/weathers/Rainy'
-import Cloudy from '@/app/components/weathers/Cloudy'
 import { useRouter } from 'next/navigation'
 interface Props {
     id: string
@@ -81,38 +76,35 @@ const DiaryDetail = ({ params }: { params: Props }) => {
 
     const handleReturn = () => {
         router.push(`/diary?page=1`)
-        
     }
     /* delete function */
-const handleDelete = async (e: any) => {
-	/* get user id from session */
-    if (confirm('정말 삭제하시겠어요?')) {
-      try {
-		const response= await fetch(
-        `http://43.202.125.125:8000/diary/${num}/`,
+    const handleDelete = async (e: any) => {
+        /* get user id from session */
+        if (confirm('정말 삭제하시겠어요?')) {
+            try {
+                const response = await fetch(
+                    `http://43.202.125.125:8000/diary/${num}/`,
 
-        {
-          method :'DELETE',
-          headers: {
-            Authorization: `Bearer ${session?.accessToken}`,
-            'Content-Type':  'application/json'
-          },
-          body : JSON.stringify(
-            {
-		          id : num
+                    {
+                        method: 'DELETE',
+                        headers: {
+                            Authorization: `Bearer ${session?.accessToken}`,
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            id: num,
+                        }),
+                    },
+                )
+                if (response.status == 204) {
+                    alert('삭제되었습니다🤗')
+                    router.push('/diary?page=1')
+                }
+            } catch (error) {
+                alert('삭제에 실패했어요🥲\n 다시 시도해 주세요')
             }
-          )
         }
-      )
-        if (response.status == 204) {
-            alert('삭제되었습니다🤗')
-            router.push('/diary?page=1')
-            }
-             } catch (error) {
-                 alert('삭제에 실패했어요🥲\n 다시 시도해 주세요')
-             }
-         }
-     }
+    }
 
     // /* modify function */
     // const handleModify = () => {
@@ -124,10 +116,12 @@ const handleDelete = async (e: any) => {
     ) : (
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
-            <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[20px] dark:bg-[#474747]">
+                <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[20px] dark:bg-[#474747]">
                     {/* music recommend*/}
                     <div className="relative flex flex-col justify-center items-center w-34 h-24 mb-3">
-                        <span className="mt-2">오늘 당신의 감정과 어울리는 음악은🎶❓</span>
+                        <span className="mt-2">
+                            오늘 당신의 감정과 어울리는 음악은🎶❓
+                        </span>
                         <div>{view?.music.artist} </div>
                         <div>{view?.music.music_title}</div>
                         {/* {view?.diary_weather === 'sunny' && <Sunny />}
@@ -144,7 +138,7 @@ const handleDelete = async (e: any) => {
                     {view?.title}
                 </div>
                 {/* emotion */}
-                 <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">
+                <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">
                     <div className="flex">
                         <div className="flex flex-col items-center gap-[15px] w-full ">
                             <Image
@@ -154,7 +148,7 @@ const handleDelete = async (e: any) => {
                                 alt={`${view?.emotion_set[0].emotion_label}`}
                                 className={`w-[110px] h-[110px]`}
                             />
-                          
+
                             <div
                                 className=" justify-center content-center items-center
               px-[12px] py-[7px] bg-[#b2a4d4] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#b2a4d4] after:border-l-[transparent]"
@@ -165,7 +159,7 @@ const handleDelete = async (e: any) => {
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 {/* user image */}
                 <div className="w-full py-[10px] flex flex-col justify-center items-center">
                     <div className="mt-[30px] w-full flex">
@@ -210,13 +204,19 @@ const handleDelete = async (e: any) => {
                     </div>
                 </div>
                 <div className="flex items-center">
-    <div className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] mr-2" onClick={handleDelete}>
-        <span className="text-lg">삭제</span>
-    </div>
-    <div className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]" onClick={handleReturn}>
-        <span className="text-lg">돌아가기</span>
-    </div>
-</div>
+                    <div
+                        className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] mr-2"
+                        onClick={handleDelete}
+                    >
+                        <span className="text-lg">삭제</span>
+                    </div>
+                    <div
+                        className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]"
+                        onClick={handleReturn}
+                    >
+                        <span className="text-lg">돌아가기</span>
+                    </div>
+                </div>
             </div>
         </div>
     )

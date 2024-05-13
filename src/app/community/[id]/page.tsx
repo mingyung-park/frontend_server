@@ -29,7 +29,6 @@ interface Props {
 
 const CommunityDetail = ({ params }: { params: Props }) => {
     const { data: session } = useSession<any>()
-    const userObj = session?.user?.pk as string
     const [view, setView] = useState<IDiary>()
     const [img, setImg] = useState<string[]>([])
     const [selImg, setSelImg] = useState('')
@@ -82,36 +81,6 @@ const CommunityDetail = ({ params }: { params: Props }) => {
     const handleReturn = () => {
         router.push(`/community?page=1`)
     }
-    // /* delete function */
-    // const handleDelete = async (e: any) => {
-    //     /* get user id from session */
-    //     if (confirm('정말 삭제하시겠어요?')) {
-    //         try {
-    //             const response = await axios.delete(
-    //                 `http://localhost:3000/api/diary`,
-    //                 {
-    //                     data: {
-    //                         id: userObj,
-    //                         diary_number: view?.diary_number,
-    //                     },
-    //                 },
-    //             )
-
-    //             if (response.data.msg === 'success') {
-    //                 alert('삭제되었습니다🤗')
-    //                 router.push('/diary?page=1')
-    //             }
-    //         } catch (error) {
-    //             alert('삭제에 실패했어요🥲\n 다시 시도해 주세요')
-    //         }
-    //     }
-    // }
-
-    // /* modify function */
-    // const handleModify = () => {
-    //     router.push(`/diary/modify/${view?.diary_number}`)
-    // }
-
     return loading ? (
         <LottieCat text={'읽어오고 있어요'} />
     ) : (
@@ -174,24 +143,6 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                                     />
                                 }
                             </div>
-                            {/* <div className="flex justify-center items-center gap-[30px]">
-                                {img.map(
-                                    (data, index) =>
-                                        data && (
-                                            <span
-                                                key={index}
-                                                onClick={() =>
-                                                    setSelImg(
-                                                        (prev) => img[index],
-                                                    )
-                                                }
-                                                className="p-1 px-[10px] cursor-pointer hover:text-[#b2a4d4] dark:text-[white] dark:hover:text-[#b2a4d4]"
-                                            >
-                                                {index + 1}
-                                            </span>
-                                        ),
-                                )}
-                            </div> */}
                         </div>
                         <div className="w-full flex flex-col">
                             {/* diary content */}

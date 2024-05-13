@@ -107,20 +107,20 @@ const page = () => {
   // API 주소를 env 파일에서 가져오기
   // useEffect 훅을 사용하여 컴포넌트가 마운트될 때 fetchData 함수 호출
   useEffect(() => {
-    if (user.pk) {
+    if (user.id) {
       fetchData()
     }
-  }, [user.pk])
+  }, [user.id])
 
   async function fetchData() {
-    if (!user.pk) return
+    if (!user.id) return
     try {
       // API 주소를 절대 경로로 쓰기
       setLoading(true)
       const response = await axios.get<{
         imgrows: IImg[]
         result: IDiary[]
-      }>(`/api/emotion?userId=${user.pk}`)
+      }>(`/api/emotion?userId=${user.id}`)
       const data = response.data // Axios already parses the JSON
 
       if (response.status === 200) {
@@ -152,7 +152,7 @@ const page = () => {
     if (!userDesc.current) return
     const result = await axios.post('/api/edit', {
       userDesc: userDesc.current.value,
-      userId: user.pk
+      userId: user.id
     }, {
       headers: {
         'Content-Type': 'application/json',
