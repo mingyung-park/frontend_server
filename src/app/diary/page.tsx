@@ -12,7 +12,7 @@ import Pagination from './_components/Pagination'
 import { IDiary } from '@/app/types/type'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import NoResult from './_components/NoResult'
 
 const Diary = () => {
@@ -85,7 +85,7 @@ const Diary = () => {
     return (
         <>
             {loading ? (
-                <LottieCat text={'읽어오고 있어요'} />
+                <LoadingCat text={'읽어오고 있어요'} />
             ) : total < 1 ? (
                 <NoResult />
             ) : (

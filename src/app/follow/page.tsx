@@ -8,7 +8,7 @@ import { useRecoilState } from 'recoil'
 import { IFollow } from './type'
 import Image from 'next/image'
 import Pagination from './_components/Pagination'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import NoResult from './_components/NoResult'
 import FollowLayout from './_components/FollowLayout'
 
@@ -94,7 +94,7 @@ const Follow = () => {
     return (
         <>
             {loading ? (
-                <LottieCat text={'읽어오고 있어요'} />
+                <LoadingCat text={'읽어오고 있어요'} />
             ) : total < 1 ? (
                 <NoResult />
             ) : (

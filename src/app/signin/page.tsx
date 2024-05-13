@@ -7,7 +7,7 @@ import React from 'react'
 import { Input } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
 import styles from './styles.module.css'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 
 const Login = () => {
     const [error, setError] = useState('')
@@ -50,7 +50,7 @@ const Login = () => {
         }
     }
     return login ? (
-        <LottieCat text="로그인 중이에요" />
+        <LoadingCat text="로그인 중이에요" />
     ) : (
         <div className="flex flex-col">
             <div className="flex justify-center items-center h-full mt-[15px]">

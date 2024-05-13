@@ -16,7 +16,7 @@ import {
     pretendard,
 } from '@/app/components/fonts/fonts'
 import { useSession } from 'next-auth/react'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import Sunny from '@/app/components/weathers/Sunny'
 import Snowy from '@/app/components/weathers/Snowy'
 import Windy from '@/app/components/weathers/Windy'
@@ -82,7 +82,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
         router.push(`/community?page=1`)
     }
     return loading ? (
-        <LottieCat text={'읽어오고 있어요'} />
+        <LoadingCat text={'읽어오고 있어요'} />
     ) : (
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
