@@ -18,19 +18,20 @@ const RefreshToken = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    Authorization: `Bearer ${session?.accessToken}`,
                 },
                 body: JSON.stringify({ refresh: session?.accessToken }),
             },
         )
 
         const result = await res.json()
-        if (res.status === 200) {
-            if (session) {
-                session.accessToken = result.access
-            }
-        } else {
+        if (!res.ok) {
             alert('다시 로그인해 주세요.')
-            signOut({ callbackUrl: '/' })
+            // signOut({ callbackUrl: '/' })
+            signOut()
+            return router.push('/')
+        } else if (res.ok) {
+            if (session) session.accessToken = result.access
         }
     }
     useEffect(() => {

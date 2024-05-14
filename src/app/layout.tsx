@@ -7,7 +7,7 @@ import NavBar from './components/Nav'
 
 export const metadata: Metadata = {
     title: 'Fairy Tairy',
-    description: '',
+    description: '나의 감정을 기록해 보세요.',
 }
 
 export default function RootLayout({
@@ -19,10 +19,11 @@ export default function RootLayout({
         <html lang="en">
             <body className={`flex flex-col w-full h-full items-center`}>
                 <Providers>
-                    <RefreshToken />
                     <DarkMode>
                         <NavBar />
+                        <RefreshToken />
                         {children}
+                        {/* <Footerer /> */}
                     </DarkMode>
                 </Providers>
             </body>
