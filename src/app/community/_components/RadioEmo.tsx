@@ -29,8 +29,8 @@ const RadioEmo = ({ view, value, setView, emotion, emoHover }: Props) => {
             />
             {view === emoHover && value !== emoHover ? (
                 <div
-                    className="absolute px-[12px] py-[5px] bg-[#9dceae] whitespace-nowrap bottom-[-20px] rounded-md left-[50%] translate-x-[-50%] shadow-xl text-black
-                                    after:content-[' '] after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:w-0 after:h-0 after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#9dceae] after:border-l-[transparent]
+                    className="absolute px-[12px] py-[5px] bg-[#8bb89a] whitespace-nowrap bottom-[-20px] rounded-md left-[50%] translate-x-[-50%] shadow-xl text-black
+                                    after:content-[' '] after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:w-0 after:h-0 after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#8bb89a] after:border-l-[transparent]
                                 "
                 >
                     <span className="text-sm flex justify-center items-center">
@@ -42,8 +42,8 @@ const RadioEmo = ({ view, value, setView, emotion, emoHover }: Props) => {
             )}
             {value === emoHover && (
                 <div
-                    className="absolute px-[12px] py-[5px] bg-[#9dceae] whitespace-nowrap bottom-[-20px] rounded-md left-[50%] translate-x-[-50%] shadow-xl text-black
-                                    after:content-[' '] after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:w-0 after:h-0 after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#9dceae] after:border-l-[transparent]
+                    className="absolute px-[12px] py-[5px] bg-[#8bb89a] whitespace-nowrap bottom-[-20px] rounded-md left-[50%] translate-x-[-50%] shadow-xl text-black
+                                    after:content-[' '] after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:w-0 after:h-0 after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#8bb89a] after:border-l-[transparent]
                                 "
                 >
                     <span className="text-sm flex justify-center items-center">

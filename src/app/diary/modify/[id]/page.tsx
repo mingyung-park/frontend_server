@@ -79,7 +79,7 @@ const Modify = ({ params }: { params: Props }) => {
             <span
                 onClick={onClick}
                 ref={ref}
-                className="cursor-pointer hover:text-[#9dceae]"
+                className="cursor-pointer hover:text-[#8bb89a]"
             >
                 {value}
             </span>
@@ -102,8 +102,8 @@ const Modify = ({ params }: { params: Props }) => {
         const formData = new FormData()
         formData.append('title', titleRef.current.value)
         formData.append('content', contentRef.current.value)
-        formData.append('id', session?.user?.id as string)
-        formData.append('name', session?.user?.name as string)
+        formData.append('id', session?.user?.pk as string)
+        formData.append('name', session?.user?.username as string)
         formData.append('weather', weather)
         formData.append('emotion', value)
         formData.append('datetime', date.toString())
@@ -163,35 +163,35 @@ const Modify = ({ params }: { params: Props }) => {
                             {selWeather ? (
                                 <div className="absolute left-[50%] translate-x-[-50%] p-[3px] px-[10px] flex justify-center items-center bottom-[0px] bg-white border gap-[10px] whitespace-nowrap rounded-md shadow-lg">
                                     <span
-                                        className="cursor-pointer hover:text-[#9dceae]"
+                                        className="cursor-pointer hover:text-[#8bb89a]"
                                         onClick={() => setWeather('sunny')}
                                     >
                                         맑음
                                     </span>
                                     <span> | </span>
                                     <span
-                                        className="cursor-pointer hover:text-[#9dceae]"
+                                        className="cursor-pointer hover:text-[#8bb89a]"
                                         onClick={() => setWeather('cloudy')}
                                     >
                                         흐림
                                     </span>
                                     <span> | </span>
                                     <span
-                                        className="cursor-pointer hover:text-[#9dceae]"
+                                        className="cursor-pointer hover:text-[#8bb89a]"
                                         onClick={() => setWeather('rainy')}
                                     >
                                         비
                                     </span>
                                     <span> | </span>
                                     <span
-                                        className="cursor-pointer hover:text-[#9dceae]"
+                                        className="cursor-pointer hover:text-[#8bb89a]"
                                         onClick={() => setWeather('windy')}
                                     >
                                         바람
                                     </span>
                                     <span> | </span>
                                     <span
-                                        className="cursor-pointer hover:text-[#9dceae]"
+                                        className="cursor-pointer hover:text-[#8bb89a]"
                                         onClick={() => setWeather('snowy')}
                                     >
                                         눈
@@ -256,7 +256,7 @@ const Modify = ({ params }: { params: Props }) => {
                                                                 imgUrl[index],
                                                         )
                                                     }
-                                                    className="p-1 px-[10px] cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                                    className="p-1 px-[10px] cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                                 >
                                                     {index + 1}
                                                 </span>
@@ -281,7 +281,7 @@ const Modify = ({ params }: { params: Props }) => {
                                                 {fontList.map((data, index) => (
                                                     <span
                                                         key={index}
-                                                        className={`my-[2px] ${data[1]} hover:text-[#9dceae]`}
+                                                        className={`my-[2px] ${data[1]} hover:text-[#8bb89a]`}
                                                         onClick={() =>
                                                             setCurFont(index)
                                                         }
@@ -308,7 +308,7 @@ const Modify = ({ params }: { params: Props }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#9dceae] text-black px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]">
+                    <div className="bg-[#8bb89a] text-black px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]">
                         <span className="text-lg" onClick={send}>
                             작성 완료
                         </span>

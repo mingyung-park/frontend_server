@@ -461,7 +461,7 @@ const page = () => {
                                             variant="flat"
                                             radius="sm"
                                             onClick={userDescPost}
-                                            className="dark:bg-[#9dceae] text-[16px]"
+                                            className="dark:bg-[#8bb89a] text-[16px]"
                                         >
                                             변경
                                         </Button>

@@ -46,7 +46,7 @@ const page = () => {
     const getData = async () => {
         if (!session) return
         else {
-            const id = session.user?.id as string
+            const id = session.user?.pk as number
             const result = await axios.patch('/api/edit', {
                 user_id: id,
             })
@@ -147,7 +147,7 @@ const page = () => {
 
                             {img ? (
                                 <div
-                                    className="text-lg flex justify-center items-center w-[250px] cursor-pointer mt-3 mb-3 p-2 pr-4 pl-4 shadow-md rounded-lg bg-[tomato] text-black dark:border-[#d3d1d1] dark:bg-[#353434] dark:text-[#fff]"
+                                    className="text-lg flex justify-center items-center w-[250px] cursor-pointer mt-3 mb-3 p-2 pr-4 pl-4 shadow-md rounded-lg bg-[tomato] text-white dark:border-[#d3d1d1] dark:bg-[#353434] dark:text-[#fff]"
                                     onClick={imgReset}
                                 >
                                     프로필 사진 수정하기
@@ -255,7 +255,7 @@ const page = () => {
                             />
 
                             {pwdata && pwdata2 !== pwdata && (
-                                <span className="flex justify-center items-center border border-gray px-[18px] py-[7px] rounded-md mt-[10px] bg-[#ef5350] bg-opacity-50 text-black">
+                                <span className="flex justify-center items-center border border-gray px-[18px] py-[7px] rounded-md mt-[10px] bg-[#ef5350] bg-opacity-50 text-white">
                                     비밀번호를 확인해 주세요
                                 </span>
                             )}
@@ -272,7 +272,7 @@ const page = () => {
                                     pwRef2.current?.value &&
                                     pwRef.current?.value ===
                                         pwRef2.current?.value
-                                        ? 'bg-black text-black dark:text-[#eee]'
+                                        ? 'bg-black text-white dark:text-[#eee]'
                                         : 'bg-neutral-200 hover:shadow-lg text-[black]'
                                 } shadow-md`}
                                 onClick={editSubmit}

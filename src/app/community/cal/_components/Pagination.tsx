@@ -32,7 +32,7 @@ const Pagination = ({ total, limit, page, date }: Props) => {
             maps.push(
                 <span
                     key={i}
-                    className={`py-[2px] px-[10px] rounded-[50%] cursor-pointer ${page === i ? 'bg-[#9dceae] text-black' : 'text-gray-500 hover:text-[#9dceae] dark:text-[#eee] dark:hover:text-[#9dceae]'}`}
+                    className={`py-[2px] px-[10px] rounded-[50%] cursor-pointer ${page === i ? 'bg-[#8bb89a] text-black' : 'text-gray-500 hover:text-[#8bb89a] dark:text-[#eee] dark:hover:text-[#8bb89a]'}`}
                     onClick={() =>
                         router.push(`/diary/cal?date=${date}&page=${i}`)
                     }
@@ -49,7 +49,7 @@ const Pagination = ({ total, limit, page, date }: Props) => {
             <div className="flex items-center h-full">
                 {prev > 1 && (
                     <span
-                        className="mr-[30px] cursor-pointer hover:text-[#9dceae]"
+                        className="mr-[30px] cursor-pointer hover:text-[#8bb89a]"
                         onClick={() =>
                             router.push(`/diary/cal?date=${date}&page=${prev}`)
                         }
@@ -64,7 +64,7 @@ const Pagination = ({ total, limit, page, date }: Props) => {
             <div className="flex items-center h-full">
                 {next < totalPage && (
                     <span
-                        className="ml-[30px] cursor-pointer hover:text-[#9dceae]"
+                        className="ml-[30px] cursor-pointer hover:text-[#8bb89a]"
                         onClick={() =>
                             router.push(`/diary/cal?date=${date}&page=${next}`)
                         }

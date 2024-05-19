@@ -84,7 +84,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
             <div className="hover:bg-green/20 rounded-md mt-5 mb-5 p-1 dark:hover:bg-[#666]">
                 <Link href="/edit" className="ml-4" onClick={closeModal}>
                     {' '}
-                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#9dceae]">
+                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#8bb89a]">
                         내 정보 변경
                     </span>
                 </Link>
@@ -99,7 +99,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                     className="ml-4"
                     onClick={closeModal}
                 >
-                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#9dceae]">
+                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#8bb89a]">
                         내 감정 보기
                     </span>
                 </Link>
@@ -109,7 +109,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                 onClick={themeOnClick}
             >
                 <div className="ml-4">
-                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#9dceae]">
+                    <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#8bb89a]">
                         {snowTheme ? '테마 끄기' : '테마 켜기'}
                     </span>
                     <span
@@ -122,7 +122,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
             <div className="hover:bg-green/20 rounded-md p-1 dark:hover:bg-[#666]">
                 <Link href="/" className="ml-4" onClick={closeModal}>
                     <button onClick={async () => handleSingOut()}>
-                        <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#9dceae]">
+                        <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#8bb89a]">
                             로그아웃
                         </span>
                     </button>

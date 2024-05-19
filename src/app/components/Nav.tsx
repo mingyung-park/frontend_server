@@ -11,7 +11,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useRecoilState } from 'recoil'
 import { userInfo, calState } from '../lib/atoms/atom'
 import axios from 'axios'
-import Snow from '../emotion/_components/Snow'
+// import Snow from '../emotion/_components/Snow'
 import NotLoginNav from './nav/NotLoginNav'
 import {
     Dropdown,
@@ -37,7 +37,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
     const [user, setUser] = useRecoilState(userInfo)
     const [isCalendarOpen, setIsCalendarOpen] = useRecoilState(calState) //달력모달
     const [userImg, setUserImg] = useState<any>('') // 유저 이미지
-    const [snowTheme, setSnowTheme] = useState<boolean>(false)
+    // const [snowTheme, setSnowTheme] = useState<boolean>(false)
     const [selectedKeys, setSelectedKeys] = React.useState<
         void | any | undefined
     >(new Set<KeyType>(['기록선택']))
@@ -47,9 +47,9 @@ const Nav: React.FC<SearchComponentProps> = () => {
         [selectedKeys],
     )
 
-    const themeOnClick = () => {
-        setSnowTheme(!snowTheme)
-    }
+    // const themeOnClick = () => {
+    //     setSnowTheme(!snowTheme)
+    // }
 
     // 로그인후 사용자 아이콘 클릭시 모달생성
     const handleButtonClick = () => {
@@ -146,19 +146,10 @@ const Nav: React.FC<SearchComponentProps> = () => {
 
     return (
         <>
-            {snowTheme ? <Snow className="-z-50"></Snow> : ''}
-
             <div className="w-full h-[67px]">
                 <div className="fixed w-full z-50">
-                    <nav
-                        className={` relative h-[65px]
-        `}
-                    >
+                    <nav className={`relative h-[65px]`}>
                         <div className="w-[100%] h-[70px] left-0 top-0 absolute bg-[#F7F6F2] dark:bg-[#474747] dark:bg-opacity-80 border-b border-slate-200 dark:border-b-0" />
-                        {/* =====================
-            로그인 회원가입 버튼
-            =====================
-        */}
                         {!isLogin ? (
                             <>
                                 {' '}
@@ -182,7 +173,6 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                 </Link>
                             </>
                         ) : (
-                            // 로그인 성공시 마이페이지 아이콘 생성
                             <>
                                 <button
                                     className="w-14 h-14 flex justify-center items-center absolute right-[3.7rem] top-2.5  border-green/80 rounded-full hover:bg-green/20 dark:border-slate-400 dark:hover:bg-slate-600"
@@ -226,8 +216,6 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                                     }
                                                     user={user}
                                                     userImg={userImg}
-                                                    themeOnClick={themeOnClick}
-                                                    snowTheme={snowTheme}
                                                 ></MypageModal>
                                             </div>
                                         </div>

@@ -28,7 +28,7 @@ const config: Config = {
         extend: {
             backgroundImage: {},
             colors: {
-                green: '#9dceae',
+                green: '#8bb89a',
             },
         },
         fontFamily: {

@@ -171,7 +171,7 @@ const page = () => {
                                 <Button
                                     size="md"
                                     radius="md"
-                                    className={`h-10 w-[19rem] rounded-md bg-[#9dceae] bg-opacity-[.8] text-lg font-medium text-black transition-colors duration-300 ease-in-out hover:bg-opacity-[1]`}
+                                    className={`h-10 w-[19rem] rounded-md bg-[#8bb89a] bg-opacity-[.8] text-lg font-medium text-black transition-colors duration-300 ease-in-out hover:bg-opacity-[1]`}
                                     onClick={joinsubmit}
                                 >
                                     {' '}

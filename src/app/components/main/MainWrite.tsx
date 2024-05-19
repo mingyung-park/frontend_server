@@ -58,7 +58,7 @@ const Write = () => {
             <span
                 onClick={onClick}
                 ref={ref}
-                className="cursor-pointer text-black hover:text-[#9dceae] dark:text-[white]"
+                className="cursor-pointer text-black hover:text-[#8bb89a] dark:text-[white]"
             >
                 {value}
             </span>
@@ -121,35 +121,35 @@ const Write = () => {
                     {selWeather ? (
                         <div className="absolute left-[50%] translate-x-[-50%] p-[3px] px-[10px] flex justify-center items-center bottom-[0px] bg-white border gap-[10px] whitespace-nowrap rounded-md shadow-lg dark:bg-[#474747] dark:border-[#555]">
                             <span
-                                className="cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                className="cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                 onClick={() => setWeather('sunny')}
                             >
                                 맑음
                             </span>
                             <span> | </span>
                             <span
-                                className="cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                className="cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                 onClick={() => setWeather('cloudy')}
                             >
                                 흐림
                             </span>
                             <span> | </span>
                             <span
-                                className="cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                className="cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                 onClick={() => setWeather('rainy')}
                             >
                                 비
                             </span>
                             <span> | </span>
                             <span
-                                className="cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                className="cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                 onClick={() => setWeather('windy')}
                             >
                                 바람
                             </span>
                             <span> | </span>
                             <span
-                                className="cursor-pointer hover:text-[#9dceae] dark:text-[white] dark:hover:text-[#9dceae]"
+                                className="cursor-pointer hover:text-[#8bb89a] dark:text-[white] dark:hover:text-[#8bb89a]"
                                 onClick={() => setWeather('snowy')}
                             >
                                 눈
@@ -199,7 +199,7 @@ const Write = () => {
                         </div>
                         {!imgUrl ? (
                             <div
-                                className="rounded-md mt-[15px] p-[5px] flex justify-center items-center bg-[#9dceae] cursor-pointer opacity-[0.8] hover:opacity-[1]"
+                                className="rounded-md mt-[15px] p-[5px] flex justify-center items-center bg-[#8bb89a] cursor-pointer opacity-[0.8] hover:opacity-[1]"
                                 onClick={() => {
                                     if (imgRef.current) imgRef.current.click()
                                 }}
@@ -239,7 +239,7 @@ const Write = () => {
                                         {fontList.map((data, index) => (
                                             <span
                                                 key={index}
-                                                className={`my-[2px] ${data[1]} text-black dark:text-[#eee] hover:text-[#9dceae] dark:hover:text-[#9dceae]`}
+                                                className={`my-[2px] ${data[1]} text-black dark:text-[#eee] hover:text-[#8bb89a] dark:hover:text-[#8bb89a]`}
                                                 onClick={() =>
                                                     setCurFont(index)
                                                 }
@@ -263,7 +263,7 @@ const Write = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-[#9dceae] text-black px-[8px] py-[2px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]">
+            <div className="bg-[#8bb89a] text-black px-[8px] py-[2px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1]">
                 <span className="text-lg" onClick={send}>
                     작성 완료
                 </span>
