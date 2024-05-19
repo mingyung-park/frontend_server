@@ -1,14 +1,24 @@
 'use client'
 
-import { useContext } from 'react';
-import { RadioContext } from './RadioContext';
+import { useContext } from 'react'
+import { RadioContext } from './RadioContext'
 
-
-const Radio = ({ children, value, name, defaultChecked, disabled, className }: any) => {
-    const group = useContext(RadioContext) as any;
+const Radio = ({
+    children,
+    value,
+    name,
+    defaultChecked,
+    backgroundColor,
+    disabled,
+    className,
+}: any) => {
+    const group = useContext(RadioContext) as any
 
     return (
-        <label className={`flex flex-col mx-[10px] ${className} cursor-pointer`}>
+        <label
+            className={`flex flex-col mx-[10px] ${className} cursor-pointer`}
+            style={{ backgroundColor }}
+        >
             {children}
             <input
                 hidden={true}
@@ -17,11 +27,17 @@ const Radio = ({ children, value, name, defaultChecked, disabled, className }: a
                 name={name}
                 defaultChecked={defaultChecked}
                 disabled={disabled || group.disabled}
-                checked={group.value !== undefined ? value === group.value : undefined}
-                onChange={(e) => group.onChange && group.onChange(e.target.value)}
+                checked={
+                    group.value !== undefined
+                        ? value === group.value
+                        : undefined
+                }
+                onChange={(e) =>
+                    group.onChange && group.onChange(e.target.value)
+                }
             />
         </label>
     )
-};
+}
 
 export default Radio

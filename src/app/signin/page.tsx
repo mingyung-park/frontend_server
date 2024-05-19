@@ -54,7 +54,7 @@ const Login = () => {
     ) : (
         <div className="flex flex-col">
             <div className="flex justify-center items-center h-full mt-[15px]">
-                <div className="relative h-full flex justify-center items-center p-[60px] px-[130px] border border-purple/40 rounded-2xl shadow-lg dark:bg-[#474747] dark:border-[#666]">
+                <div className="relative h-full flex justify-center items-center p-[60px] px-[130px] border border-green/40 rounded-2xl shadow-lg dark:bg-[#474747] dark:border-[#666]">
                     <div className=" mx-auto flex flex-col items-center justify-center ">
                         <span className="opacity-70 mb-10 dark:text-[#eee]">
                             로그인해서 감정을 기록해 봐요✏️
@@ -118,7 +118,7 @@ const Login = () => {
                         <div className="mt-3">
                             <button
                                 onClick={handleJoin}
-                                className="h-10 w-64 rounded-md bg-[#b2a4d4] bg-opacity-[.8] text-lg font-medium text-white transition-colors duration-300 ease-in-out hover:bg-opacity-[1]"
+                                className="h-10 w-64 rounded-md bg-[#9dceae] bg-opacity-[.8] text-lg font-medium text-black transition-colors duration-300 ease-in-out hover:bg-opacity-[1]"
                             >
                                 회원가입
                             </button>

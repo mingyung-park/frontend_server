@@ -18,7 +18,7 @@ const NoResult = () => {
                     작성한 일기가 없어요... 🥹
                 </span>
                 <Link href="/write" className="mt-[20px]">
-                    <span className="text-lg text-white bg-[#b2a4d4] px-[30px] py-[7px] rounded-md shadow-lg">
+                    <span className="text-lg text-black bg-[#9dceae] px-[30px] py-[7px] rounded-md shadow-lg">
                         작성하러 가기
                     </span>
                 </Link>

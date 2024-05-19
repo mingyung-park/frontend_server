@@ -120,7 +120,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                           
                             <div
                                 className=" justify-center content-center items-center
-              px-[12px] py-[7px] bg-[#b2a4d4] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#b2a4d4] after:border-l-[transparent]"
+              px-[12px] py-[7px] bg-[#9dceae] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#9dceae] after:border-l-[transparent]"
                             >
                                 <div className="text-white text-center text-[15px]">
                                     {view?.emotion_set[0].chat}
@@ -154,7 +154,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] ml-4">
+                <div className="bg-[#9dceae] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] ml-4">
                     <span className="text-lg" onClick={handleReturn}>
                         돌아가기
                     </span>

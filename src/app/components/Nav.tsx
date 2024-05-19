@@ -154,7 +154,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                         className={` relative h-[65px]
         `}
                     >
-                        <div className="w-[100%] h-[70px] left-0 top-0 absolute bg-[#ffffff] dark:bg-[#474747] dark:bg-opacity-80 border-b border-slate-200 dark:border-b-0" />
+                        <div className="w-[100%] h-[70px] left-0 top-0 absolute bg-[#F7F6F2] dark:bg-[#474747] dark:bg-opacity-80 border-b border-slate-200 dark:border-b-0" />
                         {/* =====================
             로그인 회원가입 버튼
             =====================
@@ -173,7 +173,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                 </Link>
                                 <Link href="/api/auth/signin">
                                     <button>
-                                        <div className="right-[7.5rem] top-[23px] absolute text-center text-black dark:text-white text-base font-normal ">
+                                        <div className="right-[7.5rem] top-[23px] absolute text-center text-black dark:text-black text-base font-normal ">
                                             <span className="text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100">
                                                 로그인
                                             </span>
@@ -185,15 +185,16 @@ const Nav: React.FC<SearchComponentProps> = () => {
                             // 로그인 성공시 마이페이지 아이콘 생성
                             <>
                                 <button
-                                    className="w-14 h-14 flex justify-center items-center absolute right-[3.7rem] top-2.5  border-purple/80 rounded-full hover:bg-purple/20 dark:border-slate-400 dark:hover:bg-slate-600"
+                                    className="w-14 h-14 flex justify-center items-center absolute right-[3.7rem] top-2.5  border-green/80 rounded-full hover:bg-green/20 dark:border-slate-400 dark:hover:bg-slate-600"
                                     onClick={handleButtonClick}
                                 >
+                                    {/* 유저 이미지 */}
                                     <Image
                                         src={
                                             userImg === 'no image' ||
                                             userImg === undefined ||
                                             userImg === ''
-                                                ? '/3_love.png' // Fallback image path
+                                                ? '/기쁨.png' // Fallback image path
                                                 : userImg
                                         }
                                         alt="Mypage Logo"
@@ -242,9 +243,9 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                 <div className="lg:hidden absolute right-[15rem] top-[25px] ">
                                     <Link href="/write">
                                         <div
-                                            className={`active:border-b hover:border-b dark:border-[#666] hover:text-purple active:text-purple ${
+                                            className={`active:border-b hover:border-b dark:border-[#666] hover:text-green active:text-green ${
                                                 pathname === '/write'
-                                                    ? 'text-purple '
+                                                    ? 'text-green '
                                                     : ''
                                             }`}
                                         >
@@ -263,12 +264,12 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                 </div>
 
                                 {/* 달력 버튼 */}
-
+                                {/* 
                                 <div className="absolute right-[29.2rem] top-[25px]">
                                     <button
                                         onClick={toggleCalendar}
-                                        className={`active:border-b hover:border-b dark:border-[#666] hover:text-purple active:text-purple ${
-                                            isCalendarOpen ? ' text-purple' : ''
+                                        className={`active:border-b hover:border-b dark:border-[#666] hover:text-green active:text-green ${
+                                            isCalendarOpen ? ' text-green' : ''
                                         }`}
                                     >
                                         <span
@@ -278,24 +279,24 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                             달력
                                         </span>
                                     </button>
-                                </div>
+                                </div> */}
 
                                 {/* 모달 렌더링 */}
-                                {isCalendarOpen && (
+                                {/* {isCalendarOpen && (
                                     <ModalCalendar
                                         isOpen={isCalendarOpen}
                                         closeModal={toggleCalendar}
                                         setIsCalendarOpen={setIsCalendarOpen}
                                     />
-                                )}
+                                )} */}
                                 <Link
                                     href="/diary?page=1"
                                     className="absolute right-[22rem] top-[25px] lg:hidden"
                                 >
                                     <div
-                                        className={` active:border-b hover:border-b dark:border-[#666] mb-4 hover:text-purple active:text-purple ${
+                                        className={` active:border-b hover:border-b dark:border-[#666] mb-4 hover:text-green active:text-green ${
                                             pathname === '/diary'
-                                                ? 'text-purple '
+                                                ? 'text-green '
                                                 : ''
                                         }`}
                                     >
@@ -339,14 +340,65 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         <DropdownItem key="기록선택">
                                             기록 선택
                                         </DropdownItem>
-                                        <DropdownItem key="달력">
+                                        <DropdownItem key="커뮤니티">
+                                            <Link
+                                                href="/community?page=1"
+                                                className=""
+                                            >
+                                                <div
+                                                    className={` active:border-b hover:text-green active:text-green ${
+                                                        pathname ===
+                                                        '/community'
+                                                            ? 'text-green '
+                                                            : ''
+                                                    }`}
+                                                >
+                                                    <span
+                                                        className="text-sm"
+                                                        onClick={() =>
+                                                            setIsCalendarOpen(
+                                                                (prev) => false,
+                                                            )
+                                                        }
+                                                    >
+                                                        커뮤니티
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        </DropdownItem>
+                                        <DropdownItem key="이웃">
+                                            <Link
+                                                href="/follow?page=1"
+                                                className=""
+                                            >
+                                                <div
+                                                    className={` active:border-b hover:text-green active:text-green ${
+                                                        pathname === '/follow'
+                                                            ? 'text-green '
+                                                            : ''
+                                                    }`}
+                                                >
+                                                    <span
+                                                        className="text-sm"
+                                                        onClick={() =>
+                                                            setIsCalendarOpen(
+                                                                (prev) => false,
+                                                            )
+                                                        }
+                                                    >
+                                                        이웃
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        </DropdownItem>
+                                        {/* <DropdownItem key="달력">
                                             {' '}
                                             <div className="">
                                                 <button
                                                     onClick={toggleCalendar}
-                                                    className={`active:border-b hover:border-b  hover:text-purple active:text-purple ${
+                                                    className={`active:border-b hover:border-b  hover:text-green active:text-green ${
                                                         isCalendarOpen
-                                                            ? ' text-purple'
+                                                            ? ' text-green'
                                                             : ''
                                                     }`}
                                                 >
@@ -358,16 +410,16 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                                     </span>
                                                 </button>
                                             </div>
-                                        </DropdownItem>
+                                        </DropdownItem> */}
                                         <DropdownItem key="일기기록">
                                             <Link
                                                 href="/diary?page=1"
                                                 className=""
                                             >
                                                 <div
-                                                    className={` active:border-b hover:text-purple active:text-purple ${
+                                                    className={` active:border-b hover:text-green active:text-green ${
                                                         pathname === '/diary'
-                                                            ? 'text-purple '
+                                                            ? 'text-green '
                                                             : ''
                                                     }`}
                                                 >
@@ -387,9 +439,9 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         <DropdownItem key="일기작성">
                                             <Link href="/write">
                                                 <div
-                                                    className={`active:border-b hover:text-purple active:text-purple ${
+                                                    className={`active:border-b hover:text-green active:text-green ${
                                                         pathname === '/write'
-                                                            ? 'text-purple '
+                                                            ? 'text-green '
                                                             : ''
                                                     }`}
                                                 >

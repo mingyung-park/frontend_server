@@ -283,7 +283,7 @@ const page = () => {
                                         작성해 보세요{' '}
                                     </span>
                                     <Link href="/write">
-                                        <button className="p-3 pl-10 pr-10 mt-5 mb-5 border rounded-md bg-purple text-white">
+                                        <button className="p-3 pl-10 pr-10 mt-5 mb-5 border rounded-md bg-green text-black">
                                             일기 작성하기
                                         </button>
                                     </Link>
@@ -461,7 +461,7 @@ const page = () => {
                                             variant="flat"
                                             radius="sm"
                                             onClick={userDescPost}
-                                            className="dark:bg-[#b2a4d4] text-[16px]"
+                                            className="dark:bg-[#9dceae] text-[16px]"
                                         >
                                             변경
                                         </Button>

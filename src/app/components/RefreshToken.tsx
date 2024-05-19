@@ -27,9 +27,7 @@ const RefreshToken = () => {
         const result = await res.json()
         if (!res.ok) {
             alert('다시 로그인해 주세요.')
-            // signOut({ callbackUrl: '/' })
-            signOut()
-            return router.push('/')
+            signOut({ callbackUrl: '/' })
         } else if (res.ok) {
             if (session) session.accessToken = result.access
         }

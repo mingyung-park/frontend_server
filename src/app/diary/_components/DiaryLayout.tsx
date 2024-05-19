@@ -65,7 +65,7 @@ const Diary = ({ data, userImg }: Props) => {
                 </div>
                 <div className="flex flex-col ml-[15px] justify-center">
                     {/*유저 이름*/}
-                    <span className="text-white-600 text-[14px] dark:text-[white]">
+                    <span className="text-black-600 text-[14px] dark:text-[white]">
                         {data.user.username}
                     </span>
                 </div>

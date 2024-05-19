@@ -44,7 +44,7 @@ const NotLoginMain = () => {
                     당신의 감정을 기록하고, 되돌아 보세요.
                 </span>
                 <span
-                    className="shadow-xl mt-[15px] text-[30px] px-[24px] py-[12px] rounded-md text-white bg-[#b2a4d4] cursor-pointer"
+                    className="shadow-xl mt-[15px] text-[30px] px-[24px] py-[12px] rounded-md text-black bg-[#9dceae] cursor-pointer"
                     onClick={() => router.push('/signin')}
                 >
                     내 감정을 기록하기
@@ -102,7 +102,7 @@ const NotLoginMain = () => {
                 </div>
                 <div className="w-full flex justify-center items-center mt-[200px]">
                     <span
-                        className="mt-[30px] text-[30px] px-[24px] py-[12px] border rounded-md text-white bg-[#b2a4d4] cursor-pointer"
+                        className="mt-[30px] text-[30px] px-[24px] py-[12px] border rounded-md text-black bg-[#9dceae] cursor-pointer"
                         onClick={() => router.push('/signin')}
                     >
                         감정을 기록하러 가볼까요?

@@ -110,7 +110,7 @@ const Follow = () => {
                             ></input>
                             <button
                                 onClick={Request}
-                                className="ml-auto px-4 py-2 rounded-md bg-[#b2a4d4] text-white hover:bg-[#9c8abf] transition duration-300 ease-in-out flex-shrink-0"
+                                className="ml-auto px-4 py-2 rounded-md bg-[#9dceae] text-black hover:bg-[#9c8abf] transition duration-300 ease-in-out flex-shrink-0"
                                 style={{ flex: '0 0 auto' }}
                             >
                                 전송

@@ -42,9 +42,9 @@ const DiaryDetail = () => {
                             {/* advice */}
                             <div
                                 className=" justify-center content-center items-center
-              px-[12px] py-[4px] bg-[#b2a4d4] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#b2a4d4] after:border-l-[transparent]"
+              px-[12px] py-[4px] bg-[#9dceae] whitespace-nowrap rounded-md translate-x-[0%] text-black after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#9dceae] after:border-l-[transparent]"
                             >
-                                <div className="text-white text-center text-[15px]">
+                                <div className="text-black text-center text-[15px]">
                                     행복한 일이 더 많이 생겼으면 좋겠어요!
                                 </div>
                             </div>
