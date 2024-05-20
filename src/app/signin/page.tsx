@@ -7,7 +7,7 @@ import React from 'react'
 import { Input } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
 import styles from './styles.module.css'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 
 const Login = () => {
     const [error, setError] = useState('')
@@ -17,6 +17,7 @@ const Login = () => {
     const router = useRouter()
 
     const handleLogin = async () => {
+        setLogin(false)
         if (!id) {
             alert('아이디를 입력해주세요.')
             return
@@ -36,7 +37,6 @@ const Login = () => {
             setError('login error')
         } else {
             router.push('/diary?page=1')
-            setLogin(false)
         }
     }
     const handleJoin = () => {
@@ -50,20 +50,14 @@ const Login = () => {
         }
     }
     return login ? (
-        <LottieCat text="로그인 중이에요" />
+        <LoadingCat text="로그인 중이에요" />
     ) : (
         <div className="flex flex-col">
             <div className="flex justify-center items-center h-full mt-[15px]">
-                <div className="relative h-full flex justify-center items-center p-[60px] px-[130px] border border-purple/40 rounded-2xl shadow-lg dark:bg-[#474747] dark:border-[#666]">
+                <div className="relative h-full flex justify-center items-center p-[60px] px-[130px] border border-green/40 rounded-2xl shadow-lg dark:bg-[#474747] dark:border-[#666]">
                     <div className=" mx-auto flex flex-col items-center justify-center ">
-                        <div className="mb-2 text-[3.2rem] dark:text-[white] main-light">
-                            <img src="/Gamgi.svg" alt="logo" />
-                        </div>
-                        <div className="mb-2 text-[3.2rem] dark:text-[white] main-dark">
-                            <img src="/GamgiDark.svg" alt="logo" />
-                        </div>
                         <span className="opacity-70 mb-10 dark:text-[#eee]">
-                            로그인해서 감정을 기록해 봐요✏️
+                            로그인해서 하루를 기록해 봐요✏️
                         </span>
                         <div className="relative flex w-[270px] py-[7px] flex-col items-center p-2 pt-0">
                             <Input
@@ -124,7 +118,7 @@ const Login = () => {
                         <div className="mt-3">
                             <button
                                 onClick={handleJoin}
-                                className="h-10 w-64 rounded-md bg-[#b2a4d4] bg-opacity-[.8] text-lg font-medium text-white transition-colors duration-300 ease-in-out hover:bg-opacity-[1]"
+                                className="h-10 w-64 rounded-md bg-[#8bb89a] bg-opacity-[.8] text-lg font-medium text-black transition-colors duration-300 ease-in-out hover:bg-opacity-[1]"
                             >
                                 회원가입
                             </button>

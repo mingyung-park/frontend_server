@@ -1,6 +1,6 @@
 "use client"
 import Lottie from "react-lottie-player"
-import lottieShiba from './lottieShiba.json'
+import forbidden from './forbidden.json'
 import { pretendard } from "./fonts/fonts"
 const Denined = () => {
     return (
@@ -8,7 +8,7 @@ const Denined = () => {
             <div className="flex flex-col justify-center items-center">
                 <Lottie
                     loop
-                    animationData={lottieShiba}
+                    animationData={forbidden}
                     play
                     style={{ width: 500, height: 500 }}
                 />

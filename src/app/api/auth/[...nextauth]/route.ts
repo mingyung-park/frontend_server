@@ -53,20 +53,14 @@ const handler = NextAuth({
         }),
     ],
     callbacks: {
-        async jwt({ token, user }) {
+        async jwt({ token, user }: any) {
             return { ...token, ...user }
         },
         async session({ session, token }: any) {
-            // session.user = token as any
-            // session.accessToken = token.accessToken
-            // session.refreshToken = token.refreshToken
-            // session.user.id = token.user.pk
-            // session.user.username = token.user.username
             return { ...session, ...token }
         },
     },
     pages: {
-        // 로그인 페이지를 signin으로 함.
         signIn: '/signin',
     },
 })

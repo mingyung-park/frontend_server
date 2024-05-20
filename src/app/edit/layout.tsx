@@ -1,16 +1,16 @@
 'use client'
 
-import { useSession } from "next-auth/react"
-import LottiCat from '@/app/components/LottieCat'
-import Denined from "../components/Deniend"
+import { useSession } from 'next-auth/react'
+import LottiCat from '@/app/components/LoadingCat'
+import Denined from '../components/Deniend'
 
-const Layout = ({children}: {children: React.ReactNode}) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
     const { status } = useSession()
 
-    if(status === 'loading') {
-        return <LottiCat text={'읽어오고 있어요'}/>
+    if (status === 'loading') {
+        return <LottiCat text={'읽어오고 있어요'} />
     }
-    if(status === 'unauthenticated') {
+    if (status === 'unauthenticated') {
         return <Denined />
     }
 

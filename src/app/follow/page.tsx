@@ -5,10 +5,10 @@ import { userInfo } from '@/app/lib/atoms/atom'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useRecoilState } from 'recoil'
-import { IFollow } from './types'
+import { IFollow } from './type'
 import Image from 'next/image'
 import Pagination from './_components/Pagination'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import NoResult from './_components/NoResult'
 import FollowLayout from './_components/FollowLayout'
 
@@ -94,7 +94,7 @@ const Follow = () => {
     return (
         <>
             {loading ? (
-                <LottieCat text={'읽어오고 있어요'} />
+                <LoadingCat text={'읽어오고 있어요'} />
             ) : total < 1 ? (
                 <NoResult />
             ) : (
@@ -110,7 +110,7 @@ const Follow = () => {
                             ></input>
                             <button
                                 onClick={Request}
-                                className="ml-auto px-4 py-2 rounded-md bg-[#b2a4d4] text-white hover:bg-[#9c8abf] transition duration-300 ease-in-out flex-shrink-0"
+                                className="ml-auto px-4 py-2 rounded-md bg-[#8bb89a] text-black hover:bg-[#9c8abf] transition duration-300 ease-in-out flex-shrink-0"
                                 style={{ flex: '0 0 auto' }}
                             >
                                 전송

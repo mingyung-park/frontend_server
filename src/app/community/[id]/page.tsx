@@ -16,7 +16,7 @@ import {
     pretendard,
 } from '@/app/components/fonts/fonts'
 import { useSession } from 'next-auth/react'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import Sunny from '@/app/components/weathers/Sunny'
 import Snowy from '@/app/components/weathers/Snowy'
 import Windy from '@/app/components/weathers/Windy'
@@ -29,7 +29,6 @@ interface Props {
 
 const CommunityDetail = ({ params }: { params: Props }) => {
     const { data: session } = useSession<any>()
-    const userObj = session?.user?.pk as string
     const [view, setView] = useState<IDiary>()
     const [img, setImg] = useState<string[]>([])
     const [selImg, setSelImg] = useState('')
@@ -82,60 +81,28 @@ const CommunityDetail = ({ params }: { params: Props }) => {
     const handleReturn = () => {
         router.push(`/community?page=1`)
     }
-    // /* delete function */
-    // const handleDelete = async (e: any) => {
-    //     /* get user id from session */
-    //     if (confirm('정말 삭제하시겠어요?')) {
-    //         try {
-    //             const response = await axios.delete(
-    //                 `http://localhost:3000/api/diary`,
-    //                 {
-    //                     data: {
-    //                         id: userObj,
-    //                         diary_number: view?.diary_number,
-    //                     },
-    //                 },
-    //             )
-
-    //             if (response.data.msg === 'success') {
-    //                 alert('삭제되었습니다🤗')
-    //                 router.push('/diary?page=1')
-    //             }
-    //         } catch (error) {
-    //             alert('삭제에 실패했어요🥲\n 다시 시도해 주세요')
-    //         }
-    //     }
-    // }
-
-    // /* modify function */
-    // const handleModify = () => {
-    //     router.push(`/diary/modify/${view?.diary_number}`)
-    // }
-
     return loading ? (
-        <LottieCat text={'읽어오고 있어요'} />
+        <LoadingCat text={'읽어오고 있어요'} />
     ) : (
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
                 <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
-                    {/* weather */}
+                <span className="mt-2">🎶오늘의 음악🎶</span>
                     <div className="relative flex flex-col justify-center items-center w-24 h-24 mb-3">
-                        <span className="mt-2">음악 추천</span>
-
-                        {/* {view?.diary_weather === 'sunny' && <Sunny />}
-                        {view?.diary_weather === 'rainy' && <Rainy />}
-                        {view?.diary_weather === 'cloudy' && <Cloudy />}
-                        {view?.diary_weather === 'snowy' && <Snowy />}
-                        {view?.diary_weather === 'windy' && <Windy />} */}
+                        {
+                            <Image
+                                src='/music_icon.png'
+                                alt="musicrecommend"
+                                width={200}
+                                height={200}
+                            />
+                        }
                     </div>
-                    <div>🎶{view?.music.music_title.slice(0, 8)}</div>
-                    {/* 여기 글자 길이 어떻게 할지 */}
-                </div>
-                {/* diary title */}
-                <div
-                    className={`w-full h-[50px] px-[10px] text-[30px] mt-[30px] border-b-[2px] dark:border-[#666] outline-0 bg-[transparent] ${fontList[font][1]}`}
-                >
-                    {view?.title}
+                    <div style={{ width: 120, whiteSpace: 'nowrap', 
+                    overflow: 'hidden', textOverflow: 'ellipsis' ,cursor : 'pointer'
+                    }} title={view?.music.music_title} >
+                        {(view?.music.music_title as string)}</div>
+
                 </div>
                 {/* emotion */}
                 {/* <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">
@@ -151,7 +118,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                           
                             <div
                                 className=" justify-center content-center items-center
-              px-[12px] py-[7px] bg-[#b2a4d4] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#b2a4d4] after:border-l-[transparent]"
+              px-[12px] py-[7px] bg-[#8bb89a] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#8bb89a] after:border-l-[transparent]"
                             >
                                 <div className="text-white text-center text-[15px]">
                                     {view?.emotion_set[0].chat}
@@ -174,24 +141,6 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                                     />
                                 }
                             </div>
-                            {/* <div className="flex justify-center items-center gap-[30px]">
-                                {img.map(
-                                    (data, index) =>
-                                        data && (
-                                            <span
-                                                key={index}
-                                                onClick={() =>
-                                                    setSelImg(
-                                                        (prev) => img[index],
-                                                    )
-                                                }
-                                                className="p-1 px-[10px] cursor-pointer hover:text-[#b2a4d4] dark:text-[white] dark:hover:text-[#b2a4d4]"
-                                            >
-                                                {index + 1}
-                                            </span>
-                                        ),
-                                )}
-                            </div> */}
                         </div>
                         <div className="w-full flex flex-col">
                             {/* diary content */}
@@ -203,7 +152,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#b2a4d4] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] ml-4">
+                <div className="bg-[#8bb89a] text-white px-[14px] py-[7px] rounded-md cursor-pointer opacity-[0.8] hover:opacity-[1] ml-4">
                     <span className="text-lg" onClick={handleReturn}>
                         돌아가기
                     </span>

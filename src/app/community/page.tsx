@@ -12,7 +12,7 @@ import Pagination from './_components/Pagination'
 import { IDiary } from '@/app/types/type'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
-import LottieCat from '@/app/components/LottieCat'
+import LoadingCat from '@/app/components/LoadingCat'
 import NoResult from './_components/NoResult'
 
 const Community = () => {
@@ -78,37 +78,10 @@ const Community = () => {
         setPage((prev) => Number(curPage))
     }, [curPage])
 
-    // useEffect(() => {
-    //     getDiary()
-    // }, [page])
-
-    // const CalendarInput = forwardRef(({ value, onClick }: any, ref: any) => (
-    //     <>
-    //         <div className="flex main-light">
-    //             <span>{value}</span>
-    //             <img
-    //                 src="./calendar-regular.svg"
-    //                 className="w-[20px] h-[20px] ml-[20px] cursor-pointer"
-    //                 onClick={onClick}
-    //                 ref={ref}
-    //             />
-    //         </div>
-    //         <div className="flex main-dark">
-    //             <span>{value}</span>
-    //             <img
-    //                 src="./calendar-regular-dark.svg"
-    //                 className="w-[20px] h-[20px] ml-[20px] cursor-pointer"
-    //                 onClick={onClick}
-    //                 ref={ref}
-    //             />
-    //         </div>
-    //     </>
-    // ))
-
     return (
         <>
             {loading ? (
-                <LottieCat text={'읽어오고 있어요'} />
+                <LoadingCat text={'읽어오고 있어요'} />
             ) : total < 1 ? (
                 <NoResult />
             ) : (
@@ -122,31 +95,7 @@ const Community = () => {
                             />
                         ))}
                     </div>
-                    {/* <div className="border h-[50px] rounded-md flex justify-around items-center mb-[50px] dark:bg-[#474747] shadow-lg">
-                        <div className="flex items-center px-[60px] z-[10]">
-                            <DatePicker
-                                selected={startDate}
-                                locale={ko}
-                                dateFormat="yyyy. MM. dd"
-                                closeOnScroll={true}
-                                onChange={(date: Date) => setStartDate(date)}
-                                customInput={<CalendarInput />}
-                            />
-                        </div>
-                        <div>
-                            <span> ~ </span>
-                        </div>
-                        <div className="flex items-center px-[60px] z-[10]">
-                            <DatePicker
-                                selected={endDate}
-                                locale={ko}
-                                dateFormat="yyyy. MM. dd"
-                                closeOnScroll={true}
-                                onChange={(date: Date) => setEndDate(date)}
-                                customInput={<CalendarInput />}
-                            />
-                        </div>
-                    </div> */}
+
                     <Pagination total={total} limit={6} page={page} />
                 </div>
             )}
