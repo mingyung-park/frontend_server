@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import axios from 'axios'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -60,7 +60,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                             userImg === 'no image' ||
                             userImg === undefined ||
                             userImg === ''
-                                ? '/3_love.png' // Fallback image path
+                                ? '/user.png' // Fallback image path
                                 : userImg
                         }
                         alt="Mypage Logo"
@@ -104,7 +104,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                     </span>
                 </Link>
             </div>
-            <div
+            {/*<div
                 className="hover:bg-green/20 rounded-md mt-5 mb-5 p-1 cursor-grab dark:hover:bg-[#666]"
                 onClick={themeOnClick}
             >
@@ -118,7 +118,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                         {snowTheme ? 'on' : 'off'}
                     </span>
                 </div>
-            </div>
+            </div>*/}
             <div className="hover:bg-green/20 rounded-md p-1 dark:hover:bg-[#666]">
                 <Link href="/" className="ml-4" onClick={closeModal}>
                     <button onClick={async () => handleSingOut()}>

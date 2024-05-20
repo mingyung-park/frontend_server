@@ -57,7 +57,7 @@ const Login = () => {
                 <div className="relative h-full flex justify-center items-center p-[60px] px-[130px] border border-green/40 rounded-2xl shadow-lg dark:bg-[#474747] dark:border-[#666]">
                     <div className=" mx-auto flex flex-col items-center justify-center ">
                         <span className="opacity-70 mb-10 dark:text-[#eee]">
-                            로그인해서 감정을 기록해 봐요✏️
+                            로그인해서 하루를 기록해 봐요✏️
                         </span>
                         <div className="relative flex w-[270px] py-[7px] flex-col items-center p-2 pt-0">
                             <Input

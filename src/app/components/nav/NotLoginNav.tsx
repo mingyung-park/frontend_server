@@ -15,12 +15,9 @@ const NotLoginNav = ({ isLogin }: any) => {
                     onClick={() => router.push('/')}
                 >
                     {/* 로고 바꿀것 */}
-                    <div className="w-[120px] h-[50px] mr-[60px] mt-5 main-light">
-                        <img src="/Gamgi.svg" alt="logo" />
-                    </div>
-                    <div className="w-[120px] h-[50px] mr-[60px] mt-5 main-dark">
-                        <img src="/GamgiDark.svg" alt="logo" />
-                    </div>
+                    
+                    <img src='/book.png' width={40} height={40}></img>
+                    
                 </div>
             </div>
             <div className="flex justify-center items-center pr-[30px]">
@@ -37,7 +34,7 @@ const NotLoginNav = ({ isLogin }: any) => {
                 >
                     회원 가입
                 </span>
-                <button
+                {/*<button
                     type="button"
                     className={`${!isLogin ? 'w-10 h-10' : 'w-10 h-10'}
                 p-[5px] flex justify-center items-center rounded-md bg-[#eee] hover:bg-[#ddd] dark:bg-[#555] dark:hover:bg-[#666]`}
@@ -66,7 +63,7 @@ const NotLoginNav = ({ isLogin }: any) => {
                             priority
                         />
                     )}
-                </button>
+                </button>*/}
             </div>
         </div>
     )

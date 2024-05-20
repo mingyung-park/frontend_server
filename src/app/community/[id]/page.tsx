@@ -87,24 +87,22 @@ const CommunityDetail = ({ params }: { params: Props }) => {
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
                 <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
-                    {/* weather */}
+                <span className="mt-2">🎶오늘의 음악🎶</span>
                     <div className="relative flex flex-col justify-center items-center w-24 h-24 mb-3">
-                        <span className="mt-2">음악 추천</span>
-
-                        {/* {view?.diary_weather === 'sunny' && <Sunny />}
-                        {view?.diary_weather === 'rainy' && <Rainy />}
-                        {view?.diary_weather === 'cloudy' && <Cloudy />}
-                        {view?.diary_weather === 'snowy' && <Snowy />}
-                        {view?.diary_weather === 'windy' && <Windy />} */}
+                        {
+                            <Image
+                                src='/music_icon.png'
+                                alt="musicrecommend"
+                                width={200}
+                                height={200}
+                            />
+                        }
                     </div>
-                    <div>🎶{view?.music.music_title.slice(0, 8)}</div>
-                    {/* 여기 글자 길이 어떻게 할지 */}
-                </div>
-                {/* diary title */}
-                <div
-                    className={`w-full h-[50px] px-[10px] text-[30px] mt-[30px] border-b-[2px] dark:border-[#666] outline-0 bg-[transparent] ${fontList[font][1]}`}
-                >
-                    {view?.title}
+                    <div style={{ width: 120, whiteSpace: 'nowrap', 
+                    overflow: 'hidden', textOverflow: 'ellipsis' ,cursor : 'pointer'
+                    }} title={view?.music.music_title} >
+                        {(view?.music.music_title as string)}</div>
+
                 </div>
                 {/* emotion */}
                 {/* <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">

@@ -38,16 +38,16 @@ const NotLoginMain = () => {
         <div className="w-full flex flex-col justify-center items-center py-[200px]">
             <div className="flex flex-col justify-center items-center">
                 <span className="text-[60px] font-bold">
-                    감정을 기록하는 일기
+                    Fairy Tairy
                 </span>
                 <span className="text-lg">
-                    당신의 감정을 기록하고, 되돌아 보세요.
+                    나의 하루를 글로 기록해보아요
                 </span>
                 <span
                     className="shadow-xl mt-[15px] text-[30px] px-[24px] py-[12px] rounded-md text-black bg-[#8bb89a] cursor-pointer"
                     onClick={() => router.push('/signin')}
                 >
-                    내 감정을 기록하기
+                    나의 하루 기록하기
                 </span>
             </div>
             <div className="relative flex flex-col w-full justify-center items-center mt-[100px]">
@@ -64,21 +64,21 @@ const NotLoginMain = () => {
                     />
                 </div> */}
                 <div className="flex justify-center items-center w-full mt-[-10px] ">
-                    <MainDesc
+                    {/*<MainDesc
                         hover={hover}
                         btn="first"
                         setHover={setHover}
                         pic="✏️"
                         title="일기 작성하기"
                         content="오늘 하루 있었던 일을 기록해 보세요."
-                    />
+            />*/}
                     <MainDesc
                         hover={hover}
                         btn="second"
                         setHover={setHover}
                         pic="✨"
-                        title="나에게 한 마디"
-                        content="AI가 해주는 한 마디, 위로가 될지도요."
+                        title="나를 위한 AI"
+                        content="AI가 해주는 한 마디 및 음악 추천, 위로가 되기를.."
                     />
                     <MainDesc
                         hover={hover}
@@ -88,14 +88,14 @@ const NotLoginMain = () => {
                         title="달력 보기"
                         content="그동안 써왔던 일기를 달력으로 한눈에 볼 수 있어요."
                     />
-                    <MainDesc
+                    {/*<MainDesc
                         hover={hover}
                         btn="fourth"
                         setHover={setHover}
                         pic="📊"
                         title="감정 그래프"
                         content="내 감정 변화를 확인해 볼 수도 있죠."
-                    />
+        />*/}
                 </div>
                 <div className="max-w-[1600px] h-[550px] mt-[20px] flex justify-center items-center rounded-md shadow-xl">
                     {showPages()}
@@ -105,7 +105,7 @@ const NotLoginMain = () => {
                         className="mt-[30px] text-[30px] px-[24px] py-[12px] border rounded-md text-black bg-[#8bb89a] cursor-pointer"
                         onClick={() => router.push('/signin')}
                     >
-                        감정을 기록하러 가볼까요?
+                        기록하러 가볼까요?
                     </span>
                 </div>
             </div>

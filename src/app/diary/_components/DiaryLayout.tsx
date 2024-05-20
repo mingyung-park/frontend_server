@@ -12,7 +12,7 @@ interface Props {
 const Diary = ({ data, userImg }: Props) => {
     const router = useRouter()
 
-    const userProfile = userImg ? userImg.user_image : '/joy.png' //유저 이미지 없으면 대신
+    const userProfile = userImg ? userImg.user_image : '/user.png' //유저 이미지 없으면 대신
     return (
         <div
             className="border border-[#ddd] dark:bg-[#474747] dark:border-[#555] relative w-[350px] h-[500px] rounded-[20px] flex flex-col justify-between overflow-hidden pb-[10px] shadow-lg mx-[35px] mb-[140px] hover:shadow-xl hover:scale-[1.02] ease-in duration-200 cursor-pointer"
