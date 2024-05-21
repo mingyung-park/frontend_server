@@ -25,7 +25,7 @@ const DiaryDetail = () => {
 
                 
                     <div className="text-black dark:text-[white]">
-                        2024-05-20
+                        
                     </div>
                 </div>
                 {/* diary title */}
@@ -64,7 +64,7 @@ const DiaryDetail = () => {
                             <div className="w-[200px] h-[200px] p-3 rounded-md object-contain flex justify-center items-center overflow-hidden">
                                 {
                                     <Image
-                                        src="/main/ai_image.webp"
+                                        src="/testimage.png"
                                         alt="preview"
                                         width={200}
                                         height={200}
@@ -78,8 +78,9 @@ const DiaryDetail = () => {
                                 className={`border max-w-4xl h-[230px] overflow-y-hidden outline-none rounded-md p-[25px] text-lg bg-[transparent] ${bareun.className} leading-9 whitespace-pre-wrap dark:bg-[#555] dark:border-[#444] dark:text-[white]`}
                             >
                                 오늘은 졸업 프로젝트 회의를 했다. 회의를 한 후
-                                함께 저녁을 먹으며 프로젝트 이야기를 했는데,                      
+                                함께 저녁을 먹고 산책을 하며 프로젝트 이야기를 했는데,                      
                                 처음과 비교해보면 한단계 성장한 거 같아서 너무 기뻤다.{'\n'}
+                                그리고 산책을 하며 보는 붉은 노을을 보며 내일도 열심히 해야지하고 다짐했다.
                             
                             </div>
                         </div>

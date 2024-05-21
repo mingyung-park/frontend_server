@@ -21,15 +21,15 @@ const ModalCalendar = () => {
             {'<'}
           </div>
           <div>
-            <span className="text-[20px] text-[white]">
-              2023년 12월
+            <span className="text-[20px] text-[black]">
+              2024년 5월
             </span>
           </div>
           <div>
             {'>'}
           </div>
         </div>
-        <div className="w-full flex item-center justify-center flex-nowrap relative h-[45px] py-[10px] mt-[20px] border-b-[2px] bg-[#e6e6fa] border-[#afa4ce]">
+        <div className="w-full flex item-center justify-center flex-nowrap relative h-[45px] py-[10px] mt-[20px] border-b-[2px] bg-[#88b799] border-[#8bb89a]">
           <span className="absolute text-[20px] w-[135px] px-[25px] top-0 left-[35px] text-[tomato] top-[50%] translate-y-[-50%]">일</span>
           <span className="absolute text-[20px] w-[135px] px-[25px] top-0 left-[170px] top-[50%] translate-y-[-50%] text-black">월</span>
           <span className="absolute text-[20px] w-[135px] px-[25px] top-0 left-[305px] top-[50%] translate-y-[-50%] text-black">화</span>
@@ -50,7 +50,7 @@ const ModalCalendar = () => {
                 onClick={showAlert}
                 >
                 <span>{index+1}</span>
-                {dateArr.includes(index) && <Image src="/happy.png" className='w-[30px] h-[30px]'/>}
+                {dateArr.includes(index) && <Image src="/기쁨.png" className='w-[30px] h-[30px]'/>}
               </div>
             ))
           }
