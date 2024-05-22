@@ -250,7 +250,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         </div>
                                     </Link>
                                 </div>
-
+                                
                                 {/* 달력 버튼 */}
                                 {/* 
                                 <div className="absolute right-[29.2rem] top-[25px]">
@@ -300,6 +300,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         </span>
                                     </div>
                                 </Link>
+                                
 
                                 <div
                                     className={`lg:hidden absolute right-[12.5rem] top-6 h-7 border-black border-r dark:border-slate-300`}

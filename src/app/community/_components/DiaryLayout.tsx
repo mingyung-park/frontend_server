@@ -9,17 +9,16 @@ interface Props {
     userImg: any
 }
 const emotionImg: { [key: string]: string } = {
-    normal: '/nothinking.png',
-    sad: '/sad.png',
-    angry: '/angry.png',
-    suprise: '/joy.png',
-    happy: '/3_love.png',
-    depress: '/depress.png',
+    nervous: '/불안.png',
+    sad: '/슬픔.png',
+    angry: '/분노.png',
+    suprise: '/당황.png',
+    happy: '/기쁨.png',
 }
 const Diary = ({ data, userImg }: Props) => {
     const router = useRouter()
 
-    const userProfile = userImg ? userImg.user_image : '/joy.png' //유저 이미지 없으면 대신
+    const userProfile = userImg ? userImg.user_image : '/user.png' //유저 이미지 없으면 대신
     return (
         <div
             className="border border-[#ddd] dark:bg-[#474747] dark:border-[#555] relative w-[350px] h-[500px] rounded-[20px] flex flex-col justify-between overflow-hidden pb-[10px] shadow-lg mx-[35px] mb-[140px] hover:shadow-xl hover:scale-[1.02] ease-in duration-200 cursor-pointer"
@@ -31,17 +30,11 @@ const Diary = ({ data, userImg }: Props) => {
                         <Image src={data.image_set[0].image_url} />
                     )}
                 </div>
-                {/* <div className="absolute p-[7px] w-[60px] h-[60px] rounded-[50%] bg-white shadow-lg bottom-[-30px] right-[30px] object-cover overflow-hidden z-10 dark:bg-[#666]">
-                    <img
-                        src={
-                            data.diary_userEmo
-                                ? emotionImg[data.diary_userEmo]
-                                : '/nothinking.png'
-                        }
-                        alt=""
-                        className="w-full h-full"
-                    />
-                </div> */}
+                 <div className="absolute p-[7px] w-[60px] h-[60px] rounded-[50%] bg-white shadow-lg bottom-[-30px] right-[30px] object-cover overflow-hidden z-10 dark:bg-[#666]">
+                 {data.emotion_set[0] && (
+                        <Image src={data.emotion_set[0].emotion_label}/>
+                    )}
+                </div> 
             </div>
             <div className="flex flex-col w-full p-[20px] justify-around">
                 <div className="flex flex-col w-full">
