@@ -31,9 +31,15 @@ const Diary = ({ data, userImg }: Props) => {
                     )}
                 </div>
                  <div className="absolute p-[7px] w-[60px] h-[60px] rounded-[50%] bg-white shadow-lg bottom-[-30px] right-[30px] object-cover overflow-hidden z-10 dark:bg-[#666]">
-                 {data.emotion_set[0] && (
-                        <Image src={data.emotion_set[0].emotion_label}/>
-                    )}
+                 <img
+                        src={
+                            data.emotion_set
+                                ? `/${data.emotion_set[0].emotion_label}.png`
+                                : '/nothinking.png'
+                        }
+                        alt=""
+                        className="w-full h-full"
+                    />
                 </div> 
             </div>
             <div className="flex flex-col w-full p-[20px] justify-around">
