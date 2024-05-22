@@ -25,7 +25,7 @@ jobs:
               with:
                   source-directory: 'output'
                   destination-github-username: mingyung-park
-                  destination-repository-name: frontend-server
+                  destination-repository-name: frontend_server
                   user-email: ${{ secrets.EMAIL }}
                   commit-message: ${{ github.event.commits[0].message }}
                   target-branch: main
