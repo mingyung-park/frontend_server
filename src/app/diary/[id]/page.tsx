@@ -116,7 +116,8 @@ const DiaryDetail = ({ params }: { params: Props }) => {
     ) : (
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
-                <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[20px] dark:bg-[#474747]">
+            <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
+                
                     {/* music recommend*/}
                     <span className="mt-2">🎶오늘의 음악🎶</span>
                     <div className="relative flex flex-col justify-center items-center w-24 h-24 mb-3">

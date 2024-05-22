@@ -100,14 +100,14 @@ const NotLoginMain = () => {
                 <div className="max-w-[1600px] h-[550px] mt-[20px] flex justify-center items-center rounded-md shadow-xl">
                     {showPages()}
                 </div>
-                <div className="w-full flex justify-center items-center mt-[200px]">
+                {/*<div className="w-full flex justify-center items-center mt-[200px]">
                     <span
                         className="mt-[30px] text-[30px] px-[24px] py-[12px] border rounded-md text-black bg-[#8bb89a] cursor-pointer"
                         onClick={() => router.push('/signin')}
                     >
                         기록하러 가볼까요?
                     </span>
-                </div>
+    </div>*/}
             </div>
         </div>
     )
