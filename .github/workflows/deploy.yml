@@ -24,8 +24,8 @@ jobs:
                   API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
               with:
                   source-directory: 'output'
-                  destination-github-username: mingyung_park
-                  destination-repository-name: frontend_server
+                  destination-github-username: mingyung-park
+                  destination-repository-name: frontend-server
                   user-email: ${{ secrets.EMAIL }}
                   commit-message: ${{ github.event.commits[0].message }}
                   target-branch: main
