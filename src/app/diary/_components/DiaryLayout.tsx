@@ -28,7 +28,7 @@ const Diary = ({ data, userImg }: Props) => {
                     <img
                         src={
                             data.emotion_set
-                                ? '/${data.emotion_set[0].emotion_label}.png'
+                                ? `/${data.emotion_set[0].emotion_label}.png`
                                 : '/nothinking.png'
                         }
                         alt=""

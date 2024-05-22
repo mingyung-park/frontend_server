@@ -250,7 +250,52 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                
+                                {/* 커뮤니티 */}
+                                <div className="lg:hidden absolute right-[29.2rem] top-[25px] ">
+                                    <Link href="/community?page=1">
+                                        <div
+                                            className={`active:border-b hover:border-b dark:border-[#666] hover:text-green active:text-green ${
+                                                pathname === '/community'
+                                                    ? 'text-green '
+                                                    : ''
+                                            }`}
+                                        >
+                                            <span
+                                                className=" text-base"
+                                                onClick={() =>
+                                                    setIsCalendarOpen(
+                                                        (prev) => false,
+                                                    )
+                                                }
+                                            >
+                                                커뮤니티
+                                            </span>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="lg:hidden absolute right-[36.4rem] top-[25px] ">
+                                    <Link href="/follow?page=1">
+                                        <div
+                                            className={`active:border-b hover:border-b dark:border-[#666] hover:text-green active:text-green ${
+                                                pathname === '/follow'
+                                                    ? 'text-green '
+                                                    : ''
+                                            }`}
+                                        >
+                                            <span
+                                                className=" text-base"
+                                                onClick={() =>
+                                                    setIsCalendarOpen(
+                                                        (prev) => false,
+                                                    )
+                                                }
+                                            >
+                                                이웃 추가
+                                            </span>
+                                        </div>
+                                    </Link>
+                                </div>
+
                                 {/* 달력 버튼 */}
                                 {/* 
                                 <div className="absolute right-[29.2rem] top-[25px]">
