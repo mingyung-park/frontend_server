@@ -52,7 +52,7 @@ const page = () => {
             })
             const userImg =
                 result.data.result[0].user_image === 'no image'
-                    ? '/joy.png'
+                    ? '/user.png'
                     : result.data.result[0].user_image
             console.log(userImg)
             setUser(result.data.result[0].user_id)

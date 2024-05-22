@@ -184,13 +184,13 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                             userImg === 'no image' ||
                                             userImg === undefined ||
                                             userImg === ''
-                                                ? '/기쁨.png' // Fallback image path
+                                                ? '/user.png' // Fallback image path
                                                 : userImg
                                         }
                                         alt="Mypage Logo"
                                         className=" opacity-90 hover:opacity-90 transition duration-300 rounded-full border"
-                                        width={48}
-                                        height={48}
+                                        width={43}
+                                        height={43}
                                         quality={75}
                                         priority
                                     />
@@ -250,7 +250,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         </div>
                                     </Link>
                                 </div>
-
+                                
                                 {/* 달력 버튼 */}
                                 {/* 
                                 <div className="absolute right-[29.2rem] top-[25px]">
@@ -300,6 +300,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                         </span>
                                     </div>
                                 </Link>
+                                
 
                                 <div
                                     className={`lg:hidden absolute right-[12.5rem] top-6 h-7 border-black border-r dark:border-slate-300`}
@@ -454,7 +455,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                         )}
 
                         {/* 다크모드 변경모드  */}
-                        <button
+                        {/*<button
                             type="button"
                             className={`${
                                 !isLogin
@@ -489,7 +490,7 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                     priority
                                 />
                             )}
-                        </button>
+                        </button>*/}
 
                         {/* 검색창 */}
                         {/* <div className="flex justify-center items-center self-center w-[20%] max-w-2xl h-[37px] left-[11rem] bottom-[0.7rem] absolute focus-within:shadow-md rounded-md shadow-md dark:shadow-none dark:bg-[#666] border border-[#eee] dark:border-[#666] hover:border-1 focus-within:border-1">
@@ -522,10 +523,10 @@ const Nav: React.FC<SearchComponentProps> = () => {
                                     ></Image>
                                 ) : (
                                     <Image
-                                        src="/Gamgi.svg"
+                                        src="/book.png"
                                         alt="nav-logo"
-                                        width={90}
-                                        height={90}
+                                        width={40}
+                                        height={40}
                                     ></Image>
                                 )}
                             </Link>

@@ -176,7 +176,7 @@ const Write = () => {
     return (
         <div className="relative w-[1280px] flex flex-col items-end p-[30px] relative rounded-md shadow-xl mt-[40px] dark:bg-[#474747]">
             {upLoading && <UpLoading />}
-            <div className="bg-white border shadow-lg absolute p-[10px] shadow-xl rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
+            {/*<div className="bg-white border shadow-lg absolute p-[10px] shadow-xl rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
                 <div
                     className="relative flex flex-col justify-center items-center"
                     onMouseOver={() => setSelWeather(true)}
@@ -236,12 +236,12 @@ const Write = () => {
                     closeOnScroll={true}
                     onChange={(date: Date) => setDate(date)}
                     customInput={<CalendarInput />}
-                />
-            </div>
+            />
+                </div>*/}
             <input
                 type="text"
                 ref={titleRef}
-                className={`w-full h-[50px] px-[10px] py-[30px] text-[30px] mt-[30px] border-b-[2px] dark:border-[#666] outline-0 bg-[transparent] ${fontList[curFont][1]}`}
+                className={`w-full h-[50px] px-[10px] py-[30px] text-[30px] mt-[30px] border-b-[2px] dark:border-[#666] outline-0 bg-[transparent] `}
                 placeholder="오늘은 무슨 일이 있었나요?"
             />
             <div className="w-full py-[10px] mt-[10px] flex items-center flex flex-col justify-center items-center">
@@ -279,7 +279,7 @@ const Write = () => {
                     </div>
                     <div className="w-full flex flex-col">
                         <div className="relative mb-[5px] pb-[5px] rounded-md flex items-center">
-                            <div
+                            {/*<div
                                 className="cursor-pointer z-10"
                                 onMouseOver={() => setSelFont(true)}
                                 onMouseLeave={() => setSelFont(false)}
@@ -304,7 +304,7 @@ const Write = () => {
                                         ))}
                                     </div>
                                 ) : null}
-                            </div>
+                            </div>*/}
                         </div>
                         <div className="relative w-full h-full shadow-lg border rounded-md dark:border-[#444]">
                             <textarea

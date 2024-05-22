@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import axios from 'axios'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -60,7 +60,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                             userImg === 'no image' ||
                             userImg === undefined ||
                             userImg === ''
-                                ? '/3_love.png' // Fallback image path
+                                ? '/user.png' // Fallback image path
                                 : userImg
                         }
                         alt="Mypage Logo"
@@ -73,7 +73,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                 </div>
 
                 <h1 className="mt-4 ml-3 text-lg dark:text-[white]">
-                    {user.id} 님
+                    {user.username} 님
                 </h1>
             </div>
             {/* <div className="ml-3 mb-5">
@@ -81,15 +81,15 @@ const MypageModal: React.FC<MypageModalProps> = ({
                 <p className="text-slate-500 dark:text-[#ccc]">{userData.desc}</p>
             </div> */}
             <div className="border-t-[1px] border-[#aaa] dark:border-[#666]"></div>
-            <div className="hover:bg-green/20 rounded-md mt-5 mb-5 p-1 dark:hover:bg-[#666]">
+            {/*<div className="hover:bg-green/20 rounded-md mt-5 mb-5 p-1 dark:hover:bg-[#666]">
                 <Link href="/edit" className="ml-4" onClick={closeModal}>
                     {' '}
                     <span className="text-slate-800 hover:text-slate-900 dark:text-[#eee] dark:hover:text-[#8bb89a]">
                         내 정보 변경
                     </span>
                 </Link>
-            </div>
-            <div
+        </div>*/}
+            {/*<div
                 className={`hover:bg-green/20 rounded-md p-1 dark:hover:bg-[#666] ${
                     pathname === `/emotion?userId=${user.id}` ? 'bg-green' : ''
                 }`}
@@ -103,8 +103,8 @@ const MypageModal: React.FC<MypageModalProps> = ({
                         내 감정 보기
                     </span>
                 </Link>
-            </div>
-            <div
+            </div>*/}
+            {/*<div
                 className="hover:bg-green/20 rounded-md mt-5 mb-5 p-1 cursor-grab dark:hover:bg-[#666]"
                 onClick={themeOnClick}
             >
@@ -118,7 +118,7 @@ const MypageModal: React.FC<MypageModalProps> = ({
                         {snowTheme ? 'on' : 'off'}
                     </span>
                 </div>
-            </div>
+            </div>*/}
             <div className="hover:bg-green/20 rounded-md p-1 dark:hover:bg-[#666]">
                 <Link href="/" className="ml-4" onClick={closeModal}>
                     <button onClick={async () => handleSingOut()}>

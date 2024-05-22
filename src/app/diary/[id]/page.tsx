@@ -118,18 +118,22 @@ const DiaryDetail = ({ params }: { params: Props }) => {
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
                 <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[20px] dark:bg-[#474747]">
                     {/* music recommend*/}
-                    <div className="relative flex flex-col justify-center items-center w-34 h-24 mb-3">
-                        <span className="mt-2">
-                            오늘 당신의 감정과 어울리는 음악은🎶❓
-                        </span>
-                        <div>{view?.music.artist} </div>
-                        <div>{view?.music.music_title}</div>
-                        {/* {view?.diary_weather === 'sunny' && <Sunny />}
-                        {view?.diary_weather === 'rainy' && <Rainy />}
-                        {view?.diary_weather === 'cloudy' && <Cloudy />}
-                        {view?.diary_weather === 'snowy' && <Snowy />}
-                        {view?.diary_weather === 'windy' && <Windy />} */}
+                    <span className="mt-2">🎶오늘의 음악🎶</span>
+                    <div className="relative flex flex-col justify-center items-center w-24 h-24 mb-3">
+                        {
+                            <Image
+                                src='/music_icon.png'
+                                alt="musicrecommend"
+                                width={200}
+                                height={200}
+                            />
+                        }
                     </div>
+                    <div style={{ width: 120, whiteSpace: 'nowrap', 
+                    overflow: 'hidden', textOverflow: 'ellipsis' ,cursor : 'pointer'
+                    }} title={view?.music.music_title} >
+                        {(view?.music.music_title as string)}</div>
+
                 </div>
                 {/* diary title */}
                 <div
