@@ -105,28 +105,28 @@ const CommunityDetail = ({ params }: { params: Props }) => {
 
                 </div>
                 {/* emotion */}
-                {/* <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">
+                <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">
                     <div className="flex">
                         <div className="flex flex-col items-center gap-[15px] w-full ">
                             <Image
-                                src={`/${view?.diary_userEmo}.png`}
+                                src={`/${view?.emotion_set[-1].emotion_label}.png`}
                                 width={110}
                                 height={110}
-                                alt={`${view?.diary_userEmo}`}
+                                alt={`${view?.emotion_set[-1].emotion_label}`}
                                 className={`w-[110px] h-[110px]`}
                             />
-                          
+
                             <div
                                 className=" justify-center content-center items-center
-              px-[12px] py-[7px] bg-[#8bb89a] whitespace-nowrap rounded-md translate-x-[0%] text-white after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#8bb89a] after:border-l-[transparent]"
+              px-[12px] py-[7px] bg-[#8bb89a] whitespace-nowrap rounded-md translate-x-[0%] text-black after:absolute after:top-[-10px] after:left-[50%] after:translate-x-[-50%] after:border-t-0 after:border-r-[10px] after:border-b-[15px] after:border-l-[10px] after:border-t-[transparent] after:border-r-[transparent] after:border-b-[#8bb89a] after:border-l-[transparent]"
                             >
-                                <div className="text-white text-center text-[15px]">
-                                    {view?.emotion_set[0].chat}
+                                <div className="text-black text-center text-[15px]">
+                                    ${view?.emotion_set[-1].chat}
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 {/* user image */}
                 <div className="w-full py-[10px] flex flex-col justify-center items-center">
                     <div className="mt-[30px] w-full flex">

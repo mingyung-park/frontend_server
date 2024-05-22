@@ -16,7 +16,7 @@ const Diary = ({ data, userImg }: Props) => {
     return (
         <div
             className="border border-[#ddd] dark:bg-[#474747] dark:border-[#555] relative w-[350px] h-[500px] rounded-[20px] flex flex-col justify-between overflow-hidden pb-[10px] shadow-lg mx-[35px] mb-[140px] hover:shadow-xl hover:scale-[1.02] ease-in duration-200 cursor-pointer"
-            onClick={() => router.push(`/community/${data.id}`)}
+            onClick={() => router.push(`/diary/${data.id}`)}
         >
             <div className="relative w-full h-[250px] bg-gray-200 object-cover">
                 <div className="w-full h-full object-cover overflow-hidden flex justify-center items-center">
@@ -65,7 +65,11 @@ const Diary = ({ data, userImg }: Props) => {
                 </div>
                 <div className="flex flex-col ml-[15px] justify-center">
                     {/*유저 이름*/}
-                    <span className="text-black-600 text-[14px] dark:text-[white]">
+                    <span className="text-black-600 text-[14px] dark:text-[black]">
+                        {data.user.username}
+                    </span>
+                    {/*일기 작성 날짜 */}
+                    <span className="text-black-600 text-[14px] dark:text-[black]">
                         {data.user.username}
                     </span>
                 </div>
