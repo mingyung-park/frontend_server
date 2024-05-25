@@ -13,7 +13,7 @@ const RefreshToken = () => {
         console.log('check token...')
 
         const res = await fetch(
-            'http://43.202.125.125:8000/dj-rest-auth/token/refresh/',
+            'https://fairytairy.shop/dj-rest-auth/token/refresh/',
             {
                 method: 'POST',
                 headers: {

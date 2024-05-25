@@ -21,7 +21,8 @@ const handler = NextAuth({
             async authorize(credentials, req) {
                 try {
                     const res = await fetch(
-                        `http://43.202.125.125:8000/dj-rest-auth/login/`,
+                        `https://fairytairy.shop/dj-rest-auth/login/`,
+                        // `http://43.202.125.125:8000/dj-rest-auth/login/`,
                         {
                             method: 'POST',
                             headers: {
