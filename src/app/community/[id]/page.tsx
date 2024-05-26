@@ -56,7 +56,7 @@ const CommunityDetail = ({ params }: { params: Props }) => {
         setLoading(true)
 
         // 1. 일기 읽어오기
-        const res = await fetch(`http://43.202.125.125:8000/community/${num}`, {
+        const res = await fetch(`https://fairytairy.shop/community/${num}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,22 +87,29 @@ const CommunityDetail = ({ params }: { params: Props }) => {
         <div className="w-full flex justify-center items-center p-[7px] mt-[-20px]">
             <div className="relative w-[1280px] flex flex-col items-end p-[30px]  border rounded-md shadow-lg mt-[40px] dark:bg-[#474747]">
                 <div className="border shadow-lg absolute p-[10px] rounded-md my-[20px] flex flex-col justify-center items-center top-[-20px] right-[-150px] dark:bg-[#474747]">
-                <span className="mt-2">🎶오늘의 음악🎶</span>
+                    <span className="mt-2">🎶오늘의 음악🎶</span>
                     <div className="relative flex flex-col justify-center items-center w-24 h-24 mb-3">
                         {
                             <Image
-                                src='/music_icon.png'
+                                src="/music_icon.png"
                                 alt="musicrecommend"
                                 width={200}
                                 height={200}
                             />
                         }
                     </div>
-                    <div style={{ width: 120, whiteSpace: 'nowrap', 
-                    overflow: 'hidden', textOverflow: 'ellipsis' ,cursor : 'pointer'
-                    }} title={view?.music.music_title} >
-                        {(view?.music.music_title as string)}</div>
-
+                    <div
+                        style={{
+                            width: 120,
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            cursor: 'pointer',
+                        }}
+                        title={view?.music.music_title}
+                    >
+                        {view?.music.music_title as string}
+                    </div>
                 </div>
                 {/* emotion */}
                 <div className="w-full py-[10px] mt-[20px] flex flex-col items-center justify-center">

@@ -49,7 +49,7 @@ const Community = () => {
         // if (!user.pk) return
         setLoading(true)
 
-        const res = await fetch(`http://43.202.125.125:8000/community/`, {
+        const res = await fetch(`https://fairytairy.shop/community/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ const handler = NextAuth({
                 try {
                     const res = await fetch(
                         `https://fairytairy.shop/dj-rest-auth/login/`,
-                        // `http://43.202.125.125:8000/dj-rest-auth/login/`,
+                        // `https://fairytairy.shop/dj-rest-auth/login/`,
                         {
                             method: 'POST',
                             headers: {

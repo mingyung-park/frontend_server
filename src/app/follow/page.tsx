@@ -38,7 +38,7 @@ const Follow = () => {
     }, [page])
 
     const Request = async () => {
-        const res = await fetch(`http://43.202.125.125:8000/follow/`, {
+        const res = await fetch(`https://fairytairy.shop/follow/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const Follow = () => {
         // if (!user.pk) return
         setLoading(true)
 
-        const res = await fetch(`http://43.202.125.125:8000/follow/`, {
+        const res = await fetch(`https://fairytairy.shop/follow/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -105,7 +105,7 @@ const Write = () => {
         }
 
         try {
-            const response = await fetch('http://43.202.125.125:8000/diary/', {
+            const response = await fetch('https://fairytairy.shop/diary/', {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${session?.accessToken}`,
@@ -122,7 +122,7 @@ const Write = () => {
             console.log(result)
             console.log(result.id) //에러 발생
             const response_m = await fetch(
-                `http://43.202.125.125:8000/diary_music/${result.id}/`,
+                `https://fairytairy.shop/diary_music/${result.id}/`,
                 {
                     method: 'PUT',
                     headers: {
@@ -135,33 +135,27 @@ const Write = () => {
                 },
             )
 
-            const response_i = await fetch(
-                'http://43.202.125.125:8000/image/',
-                {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${session?.accessToken}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        diary: result.id,
-                    }),
+            const response_i = await fetch('https://fairytairy.shop/image/', {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${session?.accessToken}`,
+                    'Content-Type': 'application/json',
                 },
-            )
+                body: JSON.stringify({
+                    diary: result.id,
+                }),
+            })
 
-            const response_e = await fetch(
-                'http://43.202.125.125:8000/emotion/',
-                {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${session?.accessToken}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        diary: result.id,
-                    }),
+            const response_e = await fetch('https://fairytairy.shop/emotion/', {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${session?.accessToken}`,
+                    'Content-Type': 'application/json',
                 },
-            )
+                body: JSON.stringify({
+                    diary: result.id,
+                }),
+            })
 
             if (response_i.status === 201) {
                 router.push(`/diary/${result.id}`)

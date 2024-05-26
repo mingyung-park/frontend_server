@@ -22,7 +22,7 @@
 //     try {
 //         // 토큰 생성 로직을 백엔드 API에 요청하는 코드로 변경
 //         const res = await fetch(
-//             'http://43.202.125.125:8000/dj-rest-auth/token/refresh',
+//             'https://fairytairy.shop/dj-rest-auth/token/refresh',
 //             {
 //                 method: 'POST',
 //                 headers: {
@@ -65,7 +65,7 @@
 // export const verifyJwt = (token: string) => {
 //     try {
 //         const res = await fetch(
-//             `http://43.202.125.125:8000/dj-rest-auth/token/verify`,
+//             `https://fairytairy.shop/dj-rest-auth/token/verify`,
 //             {
 //                 method: 'POST',
 //                 headers: {
@@ -95,7 +95,7 @@
 // export const verifyRefresh = (token: string) => {
 //     try {
 //         const res = await fetch(
-//             `http://43.202.125.125:8000/dj-rest-auth/token/verify`,
+//             `https://fairytairy.shop/dj-rest-auth/token/verify`,
 //             {
 //                 method: 'POST',
 //                 headers: {

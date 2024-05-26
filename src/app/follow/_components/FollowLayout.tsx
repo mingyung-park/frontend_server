@@ -25,46 +25,37 @@ const Follow = ({ data, userImg }: Props) => {
     const { data: session } = useSession()
 
     const Reject = async () => {
-        const res = await fetch(
-            `http://43.202.125.125:8000/follow/${data.id}/`,
-            {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${session?.accessToken}`,
-                },
+        const res = await fetch(`https://fairytairy.shop/follow/${data.id}/`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${session?.accessToken}`,
             },
-        )
+        })
         if (res) {
             window.location.href = '/follow?page=1'
         }
     }
     const Accept = async () => {
-        const res = await fetch(
-            `http://43.202.125.125:8000/follow/${data.id}/`,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${session?.accessToken}`,
-                },
+        const res = await fetch(`https://fairytairy.shop/follow/${data.id}/`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${session?.accessToken}`,
             },
-        )
+        })
         if (res) {
             window.location.href = '/follow?page=1'
         }
     }
     const Delete = async () => {
-        const res = await fetch(
-            `http://43.202.125.125:8000/follow/${data.id}/`,
-            {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${session?.accessToken}`,
-                },
+        const res = await fetch(`https://fairytairy.shop/follow/${data.id}/`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${session?.accessToken}`,
             },
-        )
+        })
         if (res) {
             window.location.href = '/follow?page=1'
         }

@@ -35,7 +35,7 @@ const page = () => {
         e.preventDefault()
 
         const res = await fetch(
-            `http://43.202.125.125:8000/dj-rest-auth/registration/`,
+            `https://fairytairy.shop/dj-rest-auth/registration/`,
             {
                 method: 'POST',
                 headers: {

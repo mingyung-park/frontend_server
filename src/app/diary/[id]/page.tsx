@@ -83,7 +83,7 @@ const DiaryDetail = ({ params }: { params: Props }) => {
         if (confirm('정말 삭제하시겠어요?')) {
             try {
                 const response = await fetch(
-                    `http://43.202.125.125:8000/diary/${num}/`,
+                    `https://fairytairy.shop/diary/${num}/`,
 
                     {
                         method: 'DELETE',

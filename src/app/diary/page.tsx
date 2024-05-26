@@ -49,7 +49,7 @@ const Diary = () => {
         // if (!user.pk) return
         setLoading(true)
 
-        const res = await fetch(`http://43.202.125.125:8000/diary/`, {
+        const res = await fetch(`https://fairytairy.shop/diary/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
