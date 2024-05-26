@@ -52,7 +52,7 @@ const DiaryDetail = ({ params }: { params: Props }) => {
         setLoading(true)
 
         // 1. 일기 읽어오기
-        const res = await fetch(`//43.202.125.125:8000/diary/${num}/`, {
+        const res = await fetch(`https://fairytairy.shop/diary/${num}/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
