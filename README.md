@@ -7,6 +7,24 @@
 > - 일기의 내용에 맞는 그림 생성 및 감정 분석, 음악 추천 및 코멘트 제공
 
 ---
+#### Web
+
+https://fairy-tairy.vercel.app/
+
+#### 로컬 빌드
+
+- 라이브러리 설치
+
+         $ npm install
+
+- React 프로젝트 실행
+
+         $ npm run dev
+
+- 로컬 접속
+
+       - Local:  http://localhost:3000
+---
 
 ## 🔹 1. 기획배경 및 필요성
 
