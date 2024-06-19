@@ -25,7 +25,7 @@
 # 3.웹 화면 구성
 ## 🔹 1. 메인 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/8aa5a19c-59ec-4c23-aa80-e1db47f3efbd)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/f022c515-2c16-4880-ad27-f0e6cd791a37)
 
 📖 화면 설명
 1\)
@@ -36,7 +36,8 @@
 
 ## 🔹 2. 로그인 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/22b038df-5dce-41e7-a22f-2c5d55efe132)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/573cd7e5-852e-4e19-99d6-b564a45c418c)
+
 
 📖 화면 설명
 
@@ -54,7 +55,7 @@
 
 ## 🔹 3. 일기 기록 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/05a650fb-b113-455f-a1b5-2d8f397d1923)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/97ba4dba-2587-471c-a603-c12903999583)
 
 📖 화면 설명
 
@@ -70,8 +71,7 @@
 
 ## 🔹 4. 일기 작성 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/11bc3976-7039-4aec-8498-220ccfab58dc)
-
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/c414d98f-e045-4218-914b-7d21db403676)
 
 📖 화면 설명
 
@@ -81,7 +81,7 @@
 
 ## 🔹 4-1. 일기 상세 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/4d22f4e2-dcb5-4655-a3da-0c818aa21e3f)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/a3941ce7-161e-4409-9f57-1d002889c72c)
 
 📖 화면 설명
 
@@ -99,7 +99,7 @@
 
 ## 🔹 5. 이웃 추가 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/4e279754-606c-4cbd-afbd-63194e9fb8c1)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/2512e173-802c-478d-a48f-8dd91ecc2fab)
 
 📖 화면 설명
 
@@ -111,7 +111,7 @@
 
 ## 🔹 6. 커뮤니티 페이지
 
-![image](https://github.com/Three-Park/frontend_server/assets/128453499/db956ff8-4e7e-4ad5-be4d-602e99dc2dad)
+![image](https://github.com/Three-Park/frontend_server/assets/128453499/32526563-bbb1-4180-9805-55330dcd3c69)
 
 📖 화면 설명
 
