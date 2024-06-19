@@ -25,6 +25,8 @@
 # 3.웹 화면 구성
 ## 🔹 1. 메인 페이지
 
+!![image](https://github.com/Three-Park/frontend_server/assets/128453499/a2ce94e6-0e7a-4ab1-833e-36e4f9a6113d)
+
 📖 화면 설명
 1\)
 
